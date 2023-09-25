@@ -1,23 +1,24 @@
-## Start project with `docker-compose`
+
+## Start project with **docker-compos**e
 
 ```
-$ cp .env.example .env.local
-$ docker-compose up -d --build
+cp .env.example .env.local
+
+docker-compose up -d --build
+
+make dmigr
+
+make dloaddump
 ```
 
-
-
-Exec commands for docker containers:
-
-```bash
-# load database dump from staging
-$ make dcreatedb
-$ make dloaddump
 # dump database from docker container
-$ make dcreatedump
-# delete database from docker container
-$ make ddeletedb
 
-# make migrations && migrate
-$ make dmigr
+```
+make dcreatedump
+```
+
+# delete database from docker container
+
+```
+$ make dloaddump
 ```
