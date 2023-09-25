@@ -1,0 +1,24 @@
+{% extends "include/base.html" %}
+{% load static %}
+
+{% block title %}Items{% endblock %}
+
+{% block header %}Items{% endblock %}
+{% block content %}
+
+  {% for item in items %}
+    <h3>
+      <a href="{{ item.get_absolute_url }}">
+      {{ item.name }}, Цена:
+      {{ item.price }} 
+      </a>
+    </h3>
+    <p>{{ post.text|linebreaksbr }}</p>
+
+
+    {% if not forloop.last %}
+      <hr>{% endif %}
+  {% endfor %}
+
+
+{% endblock %}

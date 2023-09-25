@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+ 
+  web:
+    container_name: web
+    build:
+      context: core/
+      dockerfile: Dockerfile
+    restart: always
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./core:/home/app/web
+    env_file:
+      - ./.env
+    ports:
+      - 8000:8000
