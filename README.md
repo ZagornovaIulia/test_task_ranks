@@ -2,7 +2,7 @@
 ## Start project with **docker-compos**e
 
 ```
-cp .env.example .env.local
+cp .env.example .env
 
 docker-compose up -d --build
 
